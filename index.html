@@ -5,10 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
+    <style>
+        @font-face {
+            font-family: CarioPlay;
+            src: url(fonts/CairoPlay.ttf);
+        }
+        @font-face {
+            font-family: Montserrat;
+            src: url(fonts/Montserrat.ttf);
+        }
+        *{
+            font-family: Montserrat;
+        }
+        body{
+            margin: 0px;
+        }
+        .navbar{
+            margin-top: 2rem;
+            font-family: CarioPlay;
+            font-size: 1.5em;
+            font-weight: 400;
+            background-color: #1d3557;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .content{
+            padding: 1rem 8rem;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 1rem;
+
+        }
+        .left{
+            /* width: 80rem; */
+        }
+        .section1 button{
+            font-size: 1em;
+            background-color: rgb(206, 1, 1);
+            color: white;
+            padding: 0.3rem 4rem;
+            border: 0px;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .dos{
+            margin-left: 1rem;
+            margin-top: 2rem;
+            border-left: 1px dotted blue;
+        }
+        .todo{
+            font-size: 1rem;
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+        .card{
+            border: 1px solid black;
+           width: 300px;
+           padding: 20px;
+           height: 80px;
+            border-radius: 20px;
+            font-family: CarioPlay;
+        }
+    </style>
 </head>
 <body>
     <div class="container" id="root">
-        
+        <div class="navbar">
+            things to do
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="section1">
+                    <button>add</button>
+                    <button>clear all</button>
+                </div>
+                <div class="dos">
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk1">
+                        <label for="chk1">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk2">
+                        <label for="chk2">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk3">
+                        <label for="chk3">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk4">
+                        <label for="chk4">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk4">
+                        <label for="chk4">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk4">
+                        <label for="chk4">go buy food</label>
+                    </div>
+                    <div class="todo">
+                        <input type="checkbox" name="checker" id="chk4">
+                        <label for="chk4">go buy food</label>
+                    </div>
+            </div>                
+            </div>
+            <div class="right">
+                <div class="prgress">
+                    <div class="card">
+                        total tasks &nbsp;&nbsp;:&nbsp; 69<br>
+                        completed &nbsp;&nbsp;:&nbsp; 69<br>
+                        remaining &nbsp;&nbsp;&nbsp;:&nbsp; 69<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
     </div>
 </body>
 </html>
