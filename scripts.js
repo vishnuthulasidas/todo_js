@@ -38,6 +38,7 @@ function chkclick(x){
     document.getElementById("remaining").innerText=count-finish;
 }
 function clearall(){
+    newclose();
     document.getElementById("main").replaceChildren()
     document.getElementById("total").innerText=0;
     document.getElementById("completed").innerText=0;
