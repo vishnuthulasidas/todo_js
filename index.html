@@ -29,55 +29,14 @@
             <div class="right">
                 <div class="prgress">
                     <div class="card">
-                        total tasks &nbsp;&nbsp;:&nbsp; 69<br>
-                        completed &nbsp;&nbsp;:&nbsp; 69<br>
-                        remaining &nbsp;&nbsp;&nbsp;:&nbsp; 69<br>
+                        total tasks &nbsp;&nbsp;:&nbsp; <span id="total">0</span><br>
+                        completed &nbsp;&nbsp;:&nbsp; <span id="completed" style="color: rgb(0, 255, 0);">0</span><br>
+                        remaining &nbsp;&nbsp;&nbsp;:&nbsp; <span id="remaining" style="color: red;">0</span><br>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer"></div>
     </div>
-<script>
-    let count=0
-    let finish=0
-    function add(){
-        document.getElementById("newtodo").style.display="block";
-        document.getElementById("new").value=""
-        document.getElementById("new").focus()
-
-    }
-    function newadd(){
-        let txtbox=document.getElementById("new");
-        let x=document.createElement("div");
-        x.className="todo"
-        let y=document.createElement("input");
-        y.type="checkbox";
-        y.id=`chk${++count}`;
-        y.setAttribute('onclick',`chkclick(${count})`);
-        let z=document.createElement("label");
-        z.setAttribute('for',`chk${count}`);
-        z.id=`lbl${count}`;
-        z.innerText=txtbox.value;
-        x.appendChild(y)
-        x.appendChild(z)
-        document.getElementById("main").appendChild(x)
-
-        document.getElementById("newtodo").style.display="";
-    }
-    function newclose(){
-        document.getElementById("new").value="";
-        document.getElementById("newtodo").style.display="";
-    }
-
-    function chkclick(x){
-        document.getElementById(`chk${x}`).disabled="true"
-        document.getElementById(`lbl${x}`).style.textDecoration="line-through"
-        finish++;
-    }
-    function clearall(){
-        document.getElementById("main").replaceChildren()
-    }
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
